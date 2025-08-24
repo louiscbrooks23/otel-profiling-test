@@ -86,7 +86,3 @@ config:
         address: ${env:MY_POD_IP}:8888
 service:
   type: LoadBalancer
-  ports:
-    - name: otlp-grpc
-      port: 4317
-      targetPort: 4317
