@@ -19,12 +19,6 @@ config:
       limit_percentage: 80
       spike_limit_percentage: 25
   receivers:
-    jaeger:
-      disabled: true
-    zipkin:
-      disabled: true
-    prometheus:
-      disabled: true
     otlp:
       protocols:
         grpc:
