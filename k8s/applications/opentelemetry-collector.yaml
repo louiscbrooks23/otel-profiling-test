@@ -17,6 +17,7 @@ spec:
   - repoURL: https://github.com/louiscbrooks23/otel-profiling-test
     targetRevision: main
     ref: values
+  project: default
   destination:
     server: "https://kubernetes.default.svc"
     namespace: default
