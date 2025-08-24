@@ -1,3 +1,4 @@
+mode: deployment
 command:
   extraArgs:
     - "--feature-gates=+service.profilesSupport"
