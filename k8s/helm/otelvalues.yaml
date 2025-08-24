@@ -40,5 +40,3 @@ config:
         exporters:
           - debug
           - otlp
-service:
-  type: LoadBalancer
