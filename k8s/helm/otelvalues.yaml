@@ -19,6 +19,8 @@ config:
       limit_percentage: 80
       spike_limit_percentage: 25
   receivers:
+    zipkin:
+    jaeger:
     otlp:
       protocols:
         grpc:
