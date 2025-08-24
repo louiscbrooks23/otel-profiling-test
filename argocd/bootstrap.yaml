@@ -9,8 +9,10 @@ spec:
   destination:
     namespace: argocd
     server: https://kubernetes.default.svc
-  project: default
   source:
     path: k8s/applications/
     repoURL: https://github.com/louiscbrooks23/otel-profiling-test
     targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true

@@ -7,7 +7,6 @@ spec:
   destination:
     namespace: default
     server: https://kubernetes.default.svc
-  project: default
   source:
     path: k8s/kustomize/grafana
     repoURL: https://github.com/louiscbrooks23/otel-profiling-test

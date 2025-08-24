@@ -4,7 +4,6 @@ metadata:
   name: opentelemetry-collector
   namespace: argocd
 spec:
-  project: default
   sources:
   - repoURL: https://open-telemetry.github.io/opentelemetry-helm-charts
     chart: open-telemetry/opentelemetry-collector
