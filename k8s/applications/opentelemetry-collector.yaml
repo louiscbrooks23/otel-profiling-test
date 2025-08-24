@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: opentelemetry-collector
+  namespace: argocd
+spec:
+  project: default
+  sources:
+  - repoURL: https://open-telemetry.github.io/opentelemetry-helm-charts
+    chart: open-telemetry/opentelemetry-collector
+    targetRevision: latest
+    helm:
+      valueFiles:
+      - $values/k8s/values/otelvalues.yaml
+      parameters:
+      - name: image.repository
+        value: "otel/opentelemetry-collector-k8s"
+  - repoURL: https://github.com/louiscbrooks23/otel-profiling-test
+    targetRevision: main
+    ref: values
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: default
