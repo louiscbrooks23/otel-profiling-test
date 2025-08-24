@@ -9,7 +9,8 @@ This repository deploys ArgoCD and a collection of apps to deploy necessary reso
 To use this repository
 
 ```
-$ kubectl apply -k argocd
+# Install ArgoCD and bootstrap apps (run twice if errors)
+$ kubectl apply -k argocd 
 
 # Wait for services to be deployed
 $ kubectl port-forward svc/grafana-service 3000:3000
