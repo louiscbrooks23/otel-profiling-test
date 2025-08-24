@@ -2,6 +2,9 @@ mode: deployment
 command:
   extraArgs:
     - "--feature-gates=+service.profilesSupport"
+presets:
+  kubernetesAttributes:
+    enabled: true
 config:
   exporters:
     debug:
