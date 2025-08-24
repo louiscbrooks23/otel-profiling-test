@@ -29,6 +29,9 @@ config:
     extensions:
       - health_check
     pipelines:
+      metrics:
+      logs:
+      traces:
       profiles:
         receivers:
           - otlp
