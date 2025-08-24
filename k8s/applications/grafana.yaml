@@ -12,3 +12,8 @@ spec:
     path: k8s/kustomize/grafana
     repoURL: https://github.com/louiscbrooks23/otel-profiling-test
     targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      enabled: true
