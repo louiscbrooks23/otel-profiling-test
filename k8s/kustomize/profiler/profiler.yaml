@@ -19,7 +19,7 @@ spec:
       containers:
         - name: profiler
           image: louisbr23ea/test-ebpf-profiler:latest
-          command: ["/usr/local/bin/ebpf-profiler", "-collection-agent", "my-opentelemetry-collector:4317", "-no-kernel-version-check", "-disable-tls", "-v"]
+          command: ["/usr/local/bin/ebpf-profiler", "-collection-agent", "opentelemetry-collector:4317", "-no-kernel-version-check", "-disable-tls", "-v"]
           imagePullPolicy: Always # Use local image
           securityContext:
             privileged: true
