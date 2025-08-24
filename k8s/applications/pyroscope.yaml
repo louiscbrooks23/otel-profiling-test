@@ -1,16 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: otel-profiling-test
+  name: pyroscope
   namespace: argocd
-  finalizers:
-  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: argocd
+    namespace: default
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: k8s/applications/
+    path: k8s/kustomize/pyroscope
     repoURL: https://github.com/louiscbrooks23/otel-profiling-test
     targetRevision: HEAD
