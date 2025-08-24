@@ -11,7 +11,7 @@ spec:
     targetRevision: latest
     helm:
       valueFiles:
-      - $values/k8s/values/otelvalues.yaml
+      - $values/k8s/helm/otelvalues.yaml
       parameters:
       - name: image.repository
         value: "otel/opentelemetry-collector-k8s"
