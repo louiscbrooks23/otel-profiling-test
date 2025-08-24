@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: default
-    server: {{ .Values.spec.destination.server }}
+    server: https://kubernetes.default.svc
   project: default
   source:
     path: k8s/kustomize/grafana
