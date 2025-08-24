@@ -40,6 +40,8 @@ config:
       profiles:
         receivers:
           - otlp
+        processors:
+          - k8sattributes
         exporters:
           - debug
           - otlp
